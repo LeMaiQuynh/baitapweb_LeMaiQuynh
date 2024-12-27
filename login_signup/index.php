@@ -1,29 +1,41 @@
 <?php
-include 'db_connection.php';
-
-$sql = "SELECT * FROM ten_bang"; 
-$result = $conn->query($sql);
-
-
-if ($result->num_rows > 0) {
-    echo "<table border='1'>
-            <tr>
-                <th>ID</th>
-                <th>Tên</th>
-                <th>Email</th>
-            </tr>";
-    while ($row = $result->fetch_assoc()) {
-        echo "<tr>
-                <td>" . $row['id'] . "</td>
-                <td>" . $row['ten'] . "</td>
-                <td>" . $row['email'] . "</td>
-              </tr>";
-    }
-    echo "</table>";
-} else {
-    echo "Không có dữ liệu!";
-}
-
-// Đóng kết nối
-$conn->close();
+    require_once '../db_connect.php' 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asd.css">
+    <title>Yêu Thích</title>
+</head>
+<body>
+    
+    <?php
+        if(isset($_GET['page_layout'])){
+            switch($_GET['page_layout']){
+                case 'danhsach':
+                    require_once 'danhsach/danhsach.php';
+                    break;
+
+                case 'them':
+                    require_once 'danhsach/them.php';
+                    break;
+
+                case 'sua':
+                    require_once 'danhsach/sua.php';
+                    break;
+
+                case 'xoa':
+                    require_once 'danhsach/xoa.php';
+                    break;
+
+                default:
+                    require_once 'danhsach/danhsach.php';
+            }
+        }else{
+            require_once 'danhsach/danhsach.php';
+        }
+    ?>
+</body>
+</html>

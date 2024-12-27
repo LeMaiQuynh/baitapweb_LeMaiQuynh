@@ -1,15 +1,13 @@
 <?php
-$servername = "localhost";
-$username = "root"; 
-$password = "1234"; 
-$database = "btlweb";
+$host = "127.0.0.1";
+$username = "root";
+$password = "admin";
+$dbname = "btlweb";
 
-
-$conn = new mysqli($servername, $username, $password, $database);
-
+$conn = new mysqli($host, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
+    die("Kết nối không thành công: " . $conn->connect_error);
+} else {
 }
-echo "Kết nối thành công!";
 ?>
