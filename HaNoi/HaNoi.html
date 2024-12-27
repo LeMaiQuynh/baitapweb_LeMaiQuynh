@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="giaodien2.css">
+    <title>Tourist Destinations in HaNoi</title>
+    <script>
+        function includeHTML() {
+            var xhttp, element, file, i;
+            var elements = document.querySelectorAll("[data-include]");
+            for (i = 0; i < elements.length; i++) {
+                element = elements[i];
+                file = element.getAttribute("data-include");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            element.innerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="Header">
+        <h1>Tourist Destinations in HaNoi</h1>
+        <h5>Explore the beauty of HaNoi in VietNam</h5>
+    </div>
+
+    <ul class="navigation">
+        <a href="/BAITAPWEB_LEMAIQUYNH/home.html">
+            <li>Home</li>
+        </a>
+        <a href="http://localhost/BAITAPWEB_LEMAIQUYNH/login_signup/ThemSuaXoa/index.php">
+            <li>Yêu Thích</li>
+        </a>
+    </ul>
+
+    <div class="box">
+        <div class="card" >
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNk0hiKji1aeJiKGmyWvsQkokDlNbXQyJufTMiV=s1360-w1360-h1020-rw"
+                alt="Lăng Chủ tịch Hồ Chí Minh">
+            <h3>Lăng Chủ tịch Hồ Chí Minh</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='LangChuTich.html'">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipO6afkO-K6SXbrj8NFvzKsFJSHWKbj9vCGxRjUc=s1360-w1360-h1020-rw" alt="Văn Miếu – Quốc Tử Giám">
+            <h3>Văn Miếu – Quốc Tử Giám</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='VanMieu.html'">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="https://lh3.googleusercontent.com/proxy/Pob69H8rpdBbKoKjPPOS6Dfr9K4vW-BI-HqEKLO2DM4lZQf0qicBsT6b2Bvt_o5bQxdjoLZ_Rw_3h6DSwjJ13AIlaaGyaMvKwJbJBB77HhJXeNu-JwJJD8N4L_kqaEHv34lMCGQcLylgQGdYcL7qbIcaqd1OZfs=s1360-w1360-h1020-rw"
+                alt="Hoàng Thành Thăng Long">
+            <h3>Hoàng Thành Thăng Long</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='HoangThanh.html'">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="https://lh3.googleusercontent.com/proxy/G1EyrVu4GKsmbjndkD7EBYvyauKzZU8TJfgNZCRAxgEeHRHlk2bRP-3ktkV1-afTyO87Ozu_rcXBs9ChyqhtvPqcklr0kVJQNUp93aIskiAWpQIaMXdsDEblEsBlhneuy0YJdTqvqfWpXg4b8SYwLNmWrtCkbDM=s1360-w1360-h1020-rw" alt="Đảo Hòn Dáu">
+            <h3>Di tích Nhà tù Hỏa Lò</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='HoaLo.html'">More details</button>
+        </div>
+        
+    </div>
+    <div class="footer">
+        &copy; 2024 HaNoi Tourism. All Rights Reserved by HaNoi.vn
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="haiphong.css">
+    <title>Tourist Destinations in HaiPhong</title>
+    <script>
+        function showDetails(title) {
+            let url = "https://example.com/details/" + title;
+            window.open(url, "_blank");
+        }
+    </script>
+
+    <script>
+
+        function includeHTML() {
+            var xhttp, element, file, i;
+            var elements = document.querySelectorAll("[data-include]");
+            for (i = 0; i < elements.length; i++) {
+                element = elements[i];
+                file = element.getAttribute("data-include");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            element.innerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="Header">
+        <h1>Tourist Destinations in HaiPhong</h1>
+        <h5>Explore the beauty of HaiPhong in VietNam</h5>
+    </div>
+
+    <ul class="navigation">
+        <a href="/BAITAPWEB_LEMAIQUYNH/home.html">
+            <li>Home</li>
+        </a>
+        <a href="http://localhost/BAITAPWEB_LEMAIQUYNH/login_signup/ThemSuaXoa/index.php">
+            <li>Yêu Thích</li>
+        </a>
+    </ul>
+
+
+    <div class="box">
+        <div class="card">
+            <img src="https://vuyen-vinhomes.com/ckfinder/userfiles/images/%C4%91%C4%83ng%20b%C3%A0i%20th%C3%A1ng%204/33/duong-den-vinhomes-vu-yen-nhanh-nhat-01.jpg"
+                alt="Đảo Vũ Yên">
+            <h3>Đảo Vũ Yên</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='daovuyen.html';">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="https://www.bambooairways.com/documents/20122/1165110/du-lich-do-son-1.jpg/e40df874-5f31-c397-bf14-5e21ba16e99a?t=1695021084287"
+                alt="Bãi biển Đồ Sơn">
+            <h3>Bãi biển Đồ Sơn</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='doson.html';">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="https://phapluat.tuoitrethudo.vn/stores/news_dataimages/nguyenvanhuy/092023/17/08/5048_1218765286-aerial-view-floating-fishing-village-rock.jpg?rt=20230917085050"
+                alt="Đảo Cát Bà">
+            <h3>Đảo Cát Bà</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='catba.html';">More details</button>
+        </div>
+
+
+    </div>
+    <div class="footer">
+        &copy; 2024 Hai Phong Tourism. All Rights Reserved by HaiPhong.vn
+    </div>
+
+</body>
+
+</html>

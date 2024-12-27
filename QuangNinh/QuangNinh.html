@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="giaodien2.css">
+    <title>Tourist Destinations in Quảng Ninh</title>
+    <script>
+        function showDetails(title) {
+            let url = "https://example.com/details/" + title;
+            window.open(url, "_blank");
+        }
+    </script>
+    <script>
+
+        function includeHTML() {
+            var xhttp, element, file, i;
+            var elements = document.querySelectorAll("[data-include]");
+            for (i = 0; i < elements.length; i++) {
+                element = elements[i];
+                file = element.getAttribute("data-include");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            element.innerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="Header">
+        <h1>Tourist Destinations in Quang Ninh</h1>
+        <h5>Explore the beauty of Quang Ninh in Việt Nam</h5>
+    </div>
+
+    <ul class="navigation">
+        <a href="/BAITAPWEB_LEMAIQUYNH/home.html">
+            <li>Home</li>
+        </a>
+        <a href="http://localhost/BAITAPWEB_LEMAIQUYNH/login_signup/ThemSuaXoa/index.php">
+            <li>Yêu Thích</li>
+        </a>
+    </ul>
+    <div class="box">
+        <div class="card">
+            <img src="img/vinhhalong.jpg" 
+            alt="Vịnh Hạ Long">
+            <h3>Vịnh Hạ Long</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='vinhhalong.html'">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="img/Coto.jpg" alt="Đảo Cô Tô">
+            <h3>Đảo Cô Tô</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='daocoto.html'">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="img/chuayentu.jpg" alt="Chùa Yên Tử">
+            <h3>Chùa Yên Tử</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='chuayentu.html'">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="img/baichay.jpg" alt="Bãi Cháy">
+            <h3>Bãi Cháy</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='baichay.html'">More details</button>
+        </div>
+
+    </div>
+    <div class="footer">
+        &copy; 2024 Quang Ninh Tourism. All Rights Reserved by QuangNinh.vn
+    </div>
+
+</body>
+
+</html>

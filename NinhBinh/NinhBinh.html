@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="giaodien2.css">
+    <title>Tourist Destinations in Ninh Bình</title>
+    <script>
+        function showDetails(title) {
+            let url = 'img/background.png' + title;
+            window.open(url, "_blank");
+        }
+    </script>
+    <script>
+
+        function includeHTML() {
+            var xhttp, element, file, i;
+            var elements = document.querySelectorAll("[data-include]");
+            for (i = 0; i < elements.length; i++) {
+                element = elements[i];
+                file = element.getAttribute("data-include");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            element.innerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="includeHTML()">
+    <div class="Header">
+        <h1>Tourist Destinations in NinhBinh</h1>
+        <h5>Explore the beauty of NinhBinh in VietNam</h5>
+    </div>
+
+    <ul class="navigation">
+        <a href="/BAITAPWEB_LEMAIQUYNH/home.html">
+            <li>Home</li>
+        </a>
+        <a href="http://localhost/BAITAPWEB_LEMAIQUYNH/login_signup/ThemSuaXoa/index.php">
+            <li>Yêu Thích</li>
+        </a>
+    </ul>
+    <!--<div data-include="header.html"></div>-->
+    <section>
+    </section>
+    <div class="box">
+        <div class="card">
+            <img src="img/cucphuong.png"
+                alt="Vườn Quốc Gia Cúc Phương">
+            <h3>Vườn Quốc Gia Cúc Phương</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='vqgcucphuong.html';">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="img/trangan.png" alt="Khu du lịch sinh thái Tràng An">
+            <h3>Khu du lịch sinh thái Tràng An</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='trangan.html';">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="https://dulichtute.com/wp-content/uploads/2022/07/chua-bai-dinh-ninh-binh.jpg"
+                alt="Chùa Bái Đính">
+            <h3>Chùa Bái Đính</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='chuabaidinh.html';">More details</button>
+        </div>
+
+        <div class="card">
+            <img src="https://thumbs.dreamstime.com/b/hoa-lu-vietnam-november-temple-dinh-tien-hoang-ninh-binh-first-capital-popular-tourist-destination-province-133571674.jpg"
+                alt="Cố Đô Hoa Lư">
+            <h3>Cố Đô Hoa Lư</h3>
+            <p></p>
+            <button class="button" onclick="window.location.href='cdhoalu.html';">More details</button>
+        </div>
+
+    </div>
+    <div class="footer">
+        &copy; 2024 Ninh Binh Tourism. All Rights Reserved by NinhBinh.vn
+    </div>
+</body>
+
+</html>
